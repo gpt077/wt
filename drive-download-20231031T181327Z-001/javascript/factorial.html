@@ -1,0 +1,25 @@
+<html>
+<body align = "center">
+<h1>Calculating Factorial</h1>
+	Enter a number: <input type= "number" id = "number">
+	<br><br>
+	<input type="submit" onclick="fact1()" value="Factorial">
+	<p id = "res"></p>
+<script>
+function fact(num){
+	if(num == 0){
+	return 1;
+	}
+	else{
+	return num * fact(num - 1);
+	}
+}
+function fact1(){
+	var num = document.getElementById("number").value;
+	var f = fact(num);
+	
+	document.getElementById("res").innerHTML = "The factorial of the number "+num+" is: "+f;
+}
+</script>
+</body>
+</html>

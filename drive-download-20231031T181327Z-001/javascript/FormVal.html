@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>form validation</title>
+</head>
+<head>
+
+</head>
+<body>
+<script>
+function validatef(){
+var name = document.myform.name.value;
+var password = document.myform.password.value;
+
+if (name == null || name == "")
+{
+	alert("Name can't be blank");
+	return false;
+}
+else if (password.length<6){
+	alert("Password must be atleast 6 characters long.");
+	return false;
+}
+}
+</script>
+<form name = "myform" method = "post" action="javamsg.html" onsubmit="return validatef()">
+	Name: <input type = "text" name = "name"><br>
+	Password: <input type = "password" name="password"><br>
+	<input type = "submit" value = "register">
+</form>
+
+
+</body>
+</html>
